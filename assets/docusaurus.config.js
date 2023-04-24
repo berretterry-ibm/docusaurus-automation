@@ -3,7 +3,7 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-const {vars}  = require('./variables.js')
+const {Info} = require('./variables.js');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -16,15 +16,15 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://${vars.org}.github.io',
+  url: Info.url,
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/${vars.project}/',
+  baseUrl: Info.baseUrl,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: '${vars.org}', // Usually your GitHub org/user name.
-  projectName: '${vars.project}', // Usually your repo name.
+  organizationName: Info.org, // Usually your GitHub org/user name.
+  projectName: Info.project, // Usually your repo name.
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -55,8 +55,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-             'https://github.com/${vars.org}/${project}',
+          editUrl: Info.repo,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
