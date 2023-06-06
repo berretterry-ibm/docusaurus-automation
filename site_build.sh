@@ -30,6 +30,14 @@ cp ./assets/docusaurus.config.js ./website/docusaurus.config.js
 
 cp -r ./assets/img ./website/static/img
 
+rm ./website/src/components/HompageFeatures/index.js
+
+rm ./website/src/pages/index.js
+
+mkdir -p .github/workflows
+
+cp ./assets/deployment.yml ./.github/workflows
+
 #echo Splitting the README file
 #python3 mdsplit.py README.md --max-level 2 --force --verbose -o website/docs
 
@@ -48,6 +56,8 @@ cd website
 
 echo Installing extra packages
 npm install --save carbon-components @cmfcmf/docusaurus-search-local @docusaurus/theme-mermaid
+
+yarn install
 
 echo Building local site for testing
 yarn build
