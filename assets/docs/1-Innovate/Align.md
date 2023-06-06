@@ -1,7 +1,7 @@
 ---
-id: define
+id: align
 sidebar_position: 2
-title: Define
+title: Align
 ---
 
 ## Vision

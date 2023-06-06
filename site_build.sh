@@ -14,9 +14,6 @@ repo=https://github.com/$org/$project.git
 echo Creating Docusaurus site
 npx create-docusaurus@latest website classic
 
-echo Installing extra packages
-npm install --save carbon-components @cmfcmf/docusaurus-search-local @docusaurus/theme-mermaid
-
 echo Cleaning up file structure
 rm -r ./website/blog
 
@@ -47,7 +44,11 @@ const Info = {
 module.exports = { Info };
 EOF
 
-echo Building local site for testing
 cd website
+
+echo Installing extra packages
+npm install --save carbon-components @cmfcmf/docusaurus-search-local @docusaurus/theme-mermaid
+
+echo Building local site for testing
 yarn build
 npm run serve

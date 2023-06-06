@@ -1,7 +1,7 @@
 ---
-id: learn
-sidebar_position: 1
-title: Learn
+id: architect
+sidebar_position: 3
+title: Architect
 ---
 
 ## Learning Resources

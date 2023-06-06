@@ -1,6 +1,6 @@
 ---
 id: solution-scale
-title: Scale
 sidebar_position: 2
+title: Scale
 ---
 
